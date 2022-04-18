@@ -9,5 +9,5 @@
         let pagename = "{{page}}";
     </script>
     <script src="/source/embed.js" ></script>
-    <iframe src="{{/pageargs}}" frameBorder="0" id="embed" onload="updateURL('/sub/'+pagename+this.contentWindow.location.pathname);"> </iframe> <!--"https://{{page}}.avali.best{{pageargs}}"-->
+    <iframe src="/{{pageargs}}" frameBorder="0" id="embed" onload="updateURL('/sub/'+pagename+this.contentWindow.location.pathname);"> </iframe> <!--"https://{{page}}.avali.best{{pageargs}}"-->
 {% endblock %}
