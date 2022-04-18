@@ -1,0 +1,10 @@
+let mut e: i32 = 0;
+
+    if uri.contains("/") {
+        e = uri.find("/");
+    } else {
+        e = uri.len();
+    }
+
+    let page = uri[0..e];
+    uri.replace_range(0..e, "");

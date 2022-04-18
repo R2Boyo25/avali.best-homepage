@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 64 64"
+   enable-background="new 0 0 64 64"
+   xml:space="preserve"
+   sodipodi:docname="moon.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs36" /><sodipodi:namedview
+   id="namedview34"
+   pagecolor="#ffffff"
+   bordercolor="#999999"
+   borderopacity="1"
+   inkscape:pageshadow="0"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="0"
+   showgrid="false"
+   inkscape:zoom="13.640625"
+   inkscape:cx="29.030928"
+   inkscape:cy="32"
+   inkscape:window-width="2560"
+   inkscape:window-height="1411"
+   inkscape:window-x="0"
+   inkscape:window-y="1"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<path
+   id="Moon"
+   d="m 63.437405,38.460632 c -0.425801,-0.206001 -0.9385,-0.0849 -1.2276,0.2911 -1.280301,1.665001 -2.945298,3.200199 -4.9502,4.5625 -11.618099,7.880802 -27.544899,4.924801 -35.4971,-6.595699 -7.815401,-11.320401 -4.9902,-26.9737001 6.296899,-34.893601 0.3799,-0.2666 0.5264,-0.7588 0.3545,-1.1895001 -0.1728,-0.4316 -0.625,-0.6835 -1.077101,-0.6181 -4.647499,0.6953 -9.207099,2.4902 -13.1875,5.1893997 C 6.9706059,10.075933 2.1415057,17.427433 0.5526057,25.907932 c -1.582,8.441403 0.2402,16.993202 5.1308002,24.079102 6.2872001,9.105499 16.4864001,14.005897 26.8554991,14.005897 6.317398,0 12.6983,-1.819397 18.293999,-5.616199 6.580002,-4.461998 11.246101,-11.129898 13.140602,-18.775398 0.114201,-0.459 -0.1104,-0.935601 -0.536101,-1.140702 z"
+   sodipodi:nodetypes="ccccccccccsccc"
+   style="fill:#7f7f7f;fill-opacity:1" />
+</svg>
