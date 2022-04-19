@@ -2,6 +2,7 @@
     <head>
         <link href="/source/main.css" rel="stylesheet" media="screen">
         <link href="/source/slider.css" rel="stylesheet" media="screen">
+        <link href="/source/table.css" rel="stylesheet" media="screen">
         <script src="/source/cookie.js"></script>
         {% block head %}
         {% endblock %}
@@ -59,10 +60,29 @@
             }
         </script>
         <img src="/source/moon.svg" height="20" width="auto" class="sicon right" style="margin-left: 5px;">
-        <main>
-            {% block body %}
-
-            {% endblock %}
-        </main>
+        <div align="center">
+            <main>
+                {% block body %}
+                <table>
+                    <caption>AAAAA</caption>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                </table>
+                {% endblock %}
+            </main>
+        </div>
     </body>
 </html>

@@ -1,8 +1,9 @@
 caption {
     padding: 10px;
-    caption-side: bottom;
+    caption-side: top;
+    text-align: left;
 }
 
 table {
-    
+    border-radius: 50px;
 }
