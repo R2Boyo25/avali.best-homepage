@@ -5,6 +5,7 @@
         <link href="/source/table.css" rel="stylesheet" media="screen">
         <script src="/source/cookie.js"></script>
         {% block head %}
+        <title>Avali.Best</title>
         {% endblock %}
     </head>
     <body>
@@ -65,6 +66,11 @@
                 {% block body %}
                 <table>
                     <caption>AAAAA</caption>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
                     <tr>
                         <td>a</td>
                         <td>b</td>

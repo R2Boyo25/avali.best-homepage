@@ -1,7 +1,6 @@
 #[macro_use] extern crate rocket;
 
 use std::collections::HashMap;
-use unicode_segmentation::UnicodeSegmentation;
 
 use rocket::{Request, Data, Route, route};
 use rocket::{response::Redirect, http::Status};
@@ -18,21 +17,17 @@ pub enum RES {
 
 fn embed4<'a>(req: &'a Request, _: Data) -> route::BoxFuture<'a> {
     let mut uri: String = req.uri().to_string();
-    uri.replace_range(0..5, "");
+    uri.replace_range(..5, "");
 
-    let mut e = 0;
-    let mut opage = "".to_owned();
-    for i in uri.graphemes(true) {
-        if i == "/" {
-            break;
-        } else {
-            e += 1;
-            opage.push_str(i);
-        }
-    }
+    let e = match uri.find("/") {
+        None => uri.chars().count(),
+        Some(x) => x,
+    };
 
-    let page = opage.as_str();
-    uri.replace_range(0..e, "");
+    let page = &uri.clone()[..e];
+
+    uri.replace_range(..e, "");
+
     if vec!["art", "chat", "wiki", "chars"].contains(&page) {
         let mut a: HashMap<&str, &str> = HashMap::new();
         a.insert("page", &page);
