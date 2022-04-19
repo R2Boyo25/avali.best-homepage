@@ -1,0 +1,82 @@
+.imgrid a {
+    overflow: hidden;
+    flex-basis: 33%;
+}
+
+@media (max-height: 1000px) {
+    .imgrid a {
+        height: 40vh;
+    }
+}
+
+@media (min-height: 1000px) {
+    .imgrid a {
+        width: 33%;
+        height: auto;
+    }
+}
+
+
+.imgrid a img{
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+	display:block;
+    object-fit: fill;
+    min-height: 100%;
+    max-height: 100%;
+    width: auto;
+}
+
+.imgrid {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.imgrid a p:nth-child(2) {
+    width: fit-content;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    border-radius: 30px;
+    backdrop-filter: blur(2px);
+    top: -75px;
+    position: relative;
+    text-align: center;
+}
+
+.imgrid a hr:nth-child(3) {
+    width: 50%;
+    position: relative;
+    top: -90px;
+}
+
+.imgrid a p:nth-child(4) {
+    width: fit-content;
+    font-size: 60%;
+    padding: 0px 5px 0px 5px;
+    border-radius: 30px;
+    backdrop-filter: blur(2px);
+    top: -90px;
+    position: relative;
+    text-align: center;
+}
+
+.imgrid a:first-child {
+    border-top-left-radius: 10px;
+}
+
+.imgrid a:nth-child(3) {
+    border-top-right-radius: 10px;
+}
+
+.imgrid a:nth-last-child(3) {
+    border-bottom-left-radius: 10px;
+}
+
+.imgrid a:last-child {
+    border-bottom-right-radius: 10px;
+}

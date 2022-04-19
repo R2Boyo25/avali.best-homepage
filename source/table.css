@@ -16,6 +16,13 @@ caption {
     text-align: left;
 }
 
+td img {
+    object-fit: cover;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
 table, th, td {
   border: 0;
 }
@@ -23,6 +30,7 @@ table, th, td {
 table {
     border-collapse: collapse;
     width: 80%;
+    max-width: 80%;
     border-radius: 10px;
     background-color: var(--table-background);
     text-align: center;
@@ -34,7 +42,7 @@ tr:nth-child(even) {
 }
 
 td {
-    padding: 5px;
+    padding: 0px;
 }
 
 table tr:last-child td:first-child {
@@ -42,5 +50,21 @@ table tr:last-child td:first-child {
 }
 
 table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+table tr:first-child td:first-child img {
+    border-top-left-radius: 10px;
+}
+
+table tr:first-child td:last-child img {
+    border-top-right-radius: 10px;
+}
+
+table tr:last-child td:first-child img {
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child img {
     border-bottom-right-radius: 10px;
 }

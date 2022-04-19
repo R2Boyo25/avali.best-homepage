@@ -3,6 +3,7 @@
         <link href="/source/main.css" rel="stylesheet" media="screen">
         <link href="/source/slider.css" rel="stylesheet" media="screen">
         <link href="/source/table.css" rel="stylesheet" media="screen">
+        <link href="/source/imggrid.css" rel="stylesheet" media="screen">
         <script src="/source/cookie.js"></script>
         {% block head %}
         <title>Avali.Best</title>
@@ -64,29 +65,15 @@
         <div align="center">
             <main>
                 {% block body %}
-                <table>
-                    <caption>AAAAA</caption>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                </table>
+                <h1 onload="this.content=screen.height;"></h1>
+                <div class="imgrid">
+                    <a><img src="/source/Avali_rplace.png"/><p>HELLO</p><hr><p>Alright, have a long description and see what it does.</p></a>
+                    <a><img src="/source/KazaniPFP.png"/><p>HELLO</p></a>
+                    <a><img src="/source/Avali_rplace.png"/><p>HELLO</p></a>
+                    <a><img src="/source/Avali_rplace.png"/><p>HELLO</p></a>
+                    <a><img src="/source/KazaniPFP.png"/><p>HELLO</p></a>
+                    <a><img src="/source/Avali_rplace.png"/><p>HELLO</p></a>
+                    <a><img src="/source/Avali_rplace.png"/><p>HELLO</p></a>
                 {% endblock %}
             </main>
         </div>
