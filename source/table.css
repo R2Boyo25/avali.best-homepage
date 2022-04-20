@@ -40,7 +40,7 @@ table {
 }
 
 tr:nth-child(even) {
-    background-color: var(--alt-table-background)
+    background-color: var(--alt-table-background);
 }
 
 td {

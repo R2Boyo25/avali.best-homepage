@@ -7,7 +7,7 @@
     <link href="/source/main.css" rel="stylesheet" media="screen">
     <link href="/source/slider.css" rel="stylesheet" media="screen">
     <link href="/source/table.css" rel="stylesheet" media="screen">
-    {% block head %}
+    <link href="/source/img-layout.css" rel="stylesheet" media="screen"> {% block head %}
     <title>Avali.Best</title>
     {% endblock %}
 </head>
@@ -33,16 +33,16 @@
                             <span class=theme-toggle>
                                 <label class="switch">
                                     <input type="checkbox" id="themeswitch" tabindex="0" onclick="changeTheme();"><span class="slider round"></span>
-                                </label>
-                            </span>
-                            <img src="/source/sun.svg" height="20" width="auto" class="sicon left" style="margin-right: 5px;">
-                            <img src="/source/moon.svg" height="20" width="auto" class="sicon right" style="margin-left: 5px;">
-                        </div>
-                    </div>
-                </div>
+            </label>
             </span>
-
+            <img src="/source/sun.svg" height="20" width="auto" class="sicon left" style="margin-right: 5px;">
+            <img src="/source/moon.svg" height="20" width="auto" class="sicon right" style="margin-left: 5px;">
         </div>
+    </div>
+    </div>
+    </span>
+
+    </div>
     </div>
     <script>
         function changeTheme() {
@@ -72,7 +72,17 @@
     <div align="center">
         <main>
             {% block body %}
-            <table>
+            <div class="imblock-container">
+                <div class="imblock">
+                    <div class="imblock-left">A</div>
+                    <div class="imblock-right">B</div>
+                </div>
+                <div class="imblock">
+                    <div class="imblock-left">A</div>
+                    <div class="imblock-right">B</div>
+                </div>
+            </div>
+            <!--<table>
                 <caption>TABLE</caption>
                 <tr>
                     <td>a</td>
@@ -94,7 +104,7 @@
                     <td>b</td>
                     <td>c</td>
                 </tr>
-            </table>
+            </table>-->
             {% endblock %}
         </main>
     </div>

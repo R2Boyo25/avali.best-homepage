@@ -1,0 +1,42 @@
+:root[color-mode="dark"] {
+    --alt-bg: rgba(48, 48, 48, 0.5);
+    --alt-alt-bg: rgba(58, 58, 58, 0.75);
+}
+
+:root[color-mode="light"] {
+    --alt-bg: rgba(192, 192, 192, 0.5);
+    --alt-alt-bg: rgba(173, 173, 173, 0.75);
+}
+
+.imblock {
+    height: fit-content;
+    min-height: min-content;
+}
+
+.imblock-container .imblock {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.imblock-container .imblock:nth-child(even) {
+    background-color: var(--alt-bg);
+}
+
+.imblock-container .imblock:nth-child(odd) {
+    background-color: var(--alt-alt-bg);
+}
+
+.imblock-container .imblock .imblock-left {
+    width: calc(35% - 10vw);
+    background-color: rgba(70, 70, 70, 0.25);
+    float: left;
+    text-align: center;
+    padding: 50px 0px 50px 10vw;
+}
+
+.imblock-container .imblock .imblock-right {
+    width: calc(65% - 10vw);
+    float: right;
+    text-align: center;
+    padding: 50px 10vw 50px 0px;
+}
