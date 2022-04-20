@@ -1,81 +1,103 @@
 <html color-mode="light">
-    <head>
-        <link href="/source/main.css" rel="stylesheet" media="screen">
-        <link href="/source/slider.css" rel="stylesheet" media="screen">
-        <link href="/source/table.css" rel="stylesheet" media="screen">
-        <link href="/source/imggrid.css" rel="stylesheet" media="screen">
-        <script src="/source/cookie.js"></script>
-        {% block head %}
-        <title>Avali.Best</title>
-        {% endblock %}
-    </head>
-    <body>
-        <div class=topbar>
-            <div class="vertical-center">
-                <a href="/">Home</a>
-                <span class="verticalLine"></span>
-                <a href="/sub/art">Art</a>
-                <span class="verticalLine"></span>
-                <a href="/sub/chat">Chat</a>
-                <span class="verticalLine"></span>
-                <a href="/sub/wiki">Wiki</a>
-                <span class="verticalLine"></span>
-                <a href="/sub/chars">Characters</a>
-                
-                <span class="right">
-                    
-                    <!--<span class="toggleBody"></span>-->
-                    <img src="/source/KazaniPFP.png" class="pfp"/>
-                    
-                </span>
-                
-            </div>
+
+<head>
+    <script src="/source/cookie.js"></script>
+    <link href="/source/dropdown/dropdown.css" rel="stylesheet" media="screen">
+    <script src="/source/dropdown/dropdown.js"></script>
+    <link href="/source/main.css" rel="stylesheet" media="screen">
+    <link href="/source/slider.css" rel="stylesheet" media="screen">
+    <link href="/source/table.css" rel="stylesheet" media="screen">
+    {% block head %}
+    <title>Avali.Best</title>
+    {% endblock %}
+</head>
+
+<body>
+    <div class=topbar>
+        <div class="vertical-center">
+            <a href="/">Home</a>
+            <span class="verticalLine"></span>
+            <a href="/sub/art">Art</a>
+            <span class="verticalLine"></span>
+            <a href="/sub/chat">Chat</a>
+            <span class="verticalLine"></span>
+            <a href="/sub/wiki">Wiki</a>
+            <span class="verticalLine"></span>
+            <a href="/sub/chars">Characters</a>
+
+            <span class="topbar-right">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(this)" class="dropbtn" hidden><img src="/source/KazaniPFP.png" class="pfp" /></button>
+                    <div class="dropdown-content">
+                        <div align="center">
+                            <span class=theme-toggle>
+                                <label class="switch">
+                                    <input type="checkbox" id="themeswitch" tabindex="0" onclick="changeTheme();"><span class="slider round"></span>
+                                </label>
+                            </span>
+                            <img src="/source/sun.svg" height="20" width="auto" class="sicon left" style="margin-right: 5px;">
+                            <img src="/source/moon.svg" height="20" width="auto" class="sicon right" style="margin-left: 5px;">
+                        </div>
+                    </div>
+                </div>
+            </span>
+
         </div>
-        <script>
-            function changeTheme() {
-                let h = document.documentElement;
-                if (h.getAttribute("color-mode") == "light") {
-                    h.setAttribute("color-mode", "dark");
-                } else {
-                    h.setAttribute("color-mode", "light");
-                }
-                    setCookie("theme", h.getAttribute("color-mode"));
-            }
-        </script>
-        <img src="/source/sun.svg" height="20" width="auto" class="sicon left" style="margin-right: 5px;">
-        <div class=theme-toggle>
-        <label class="switch">
-            <input type="checkbox" id="themeswitch" tabindex="0" onclick="changeTheme();"><span class="slider round"></span>
-        </label>
-        </div>
-        <script>
-        if (getCookie("theme") != "") {
-                let a = document.getElementById("themeswitch");
-                if (getCookie("theme") == "light") {
-                    a.checked = false;
-                } else {
-                    a.checked = true;
-                }
-                document.documentElement.setAttribute("color-mode", getCookie("theme"));
+    </div>
+    <script>
+        function changeTheme() {
+            let h = document.documentElement;
+            if (h.getAttribute("color-mode") == "light") {
+                h.setAttribute("color-mode", "dark");
             } else {
-                setCookie("theme", "light");
+                h.setAttribute("color-mode", "light");
             }
-        </script>
-        <img src="/source/moon.svg" height="20" width="auto" class="sicon right" style="margin-left: 5px;">
-        <div align="center">
-            <main>
-                {% block body %}
-                <h1 onload="this.content=screen.height;"></h1>
-                <div class="imgrid">
-                    <a><img src="/source/Avali_rplace.png"/><p>HELLO</p><hr><p>Alright, have a long description and see what it does.</p></a>
-                    <a><img src="/source/KazaniPFP.png"/><p>HELLO</p></a>
-                    <a><img src="/source/Avali_rplace.png"/><p>HELLO</p></a>
-                    <a><img src="/source/Avali_rplace.png"/><p>HELLO</p></a>
-                    <a><img src="/source/KazaniPFP.png"/><p>HELLO</p></a>
-                    <a><img src="/source/Avali_rplace.png"/><p>HELLO</p></a>
-                    <a><img src="/source/Avali_rplace.png"/><p>HELLO</p></a>
-                {% endblock %}
-            </main>
-        </div>
-    </body>
+            setCookie("theme", h.getAttribute("color-mode"));
+        }
+    </script>
+    <script>
+        if (getCookie("theme") != "") {
+            let a = document.getElementById("themeswitch");
+            if (getCookie("theme") == "light") {
+                a.checked = false;
+            } else {
+                a.checked = true;
+            }
+            document.documentElement.setAttribute("color-mode", getCookie("theme"));
+        } else {
+            setCookie("theme", "light");
+        }
+    </script>
+
+    <div align="center">
+        <main>
+            {% block body %}
+            <table>
+                <caption>TABLE</caption>
+                <tr>
+                    <td>a</td>
+                    <td>b</td>
+                    <td>c</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>b</td>
+                    <td>c</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>b</td>
+                    <td>c</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>b</td>
+                    <td>c</td>
+                </tr>
+            </table>
+            {% endblock %}
+        </main>
+    </div>
+</body>
+
 </html>

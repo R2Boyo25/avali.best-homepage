@@ -1,10 +1,10 @@
-:root[color-mode = "dark"]{
+:root[color-mode="dark"] {
     --table-background: #3d3d3d;
     --alt-table-background: #525252;
     --table-caption-border: rgba(255, 255, 255, 100%);
 }
 
-:root[color-mode = "light"]{
+:root[color-mode="light"] {
     --table-background: rgb(221, 221, 221);
     --alt-table-background: rgb(197, 197, 197);
     --table-caption-border: rgba(0, 0, 0, 100%);
@@ -23,8 +23,10 @@ td img {
     height: auto;
 }
 
-table, th, td {
-  border: 0;
+table,
+th,
+td {
+    border: 0;
 }
 
 table {
@@ -42,7 +44,7 @@ tr:nth-child(even) {
 }
 
 td {
-    padding: 0px;
+    padding: 5px;
 }
 
 table tr:last-child td:first-child {

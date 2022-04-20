@@ -1,10 +1,10 @@
 /* https://www.w3schools.com/howto/howto_css_switch.asp */
 
-:root[color-mode = "dark"] {
+:root[color-mode="dark"] {
     --slider-shadow: 2px;
 }
 
-:root[color-mode = "light"] {
+:root[color-mode="light"] {
     --slider-shadow: 5px;
 }
 
@@ -14,31 +14,31 @@
     display: inline-block;
     width: 60px;
     height: 34px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
+}
+
+/* Hide default HTML checkbox */
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  /* The slider */
-  .slider {
+}
+
+/* The slider */
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 60px;
+    height: 34px;
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
     display: inline-block;
     box-shadow: 5px 5px 10px 0px #00000050 inset;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 40px;
@@ -52,23 +52,43 @@
     -webkit-transition: .4s;
     transition: .4s;
     box-shadow: 1px var(--slider-shadow) 3px 1px rgba(202, 202, 202, 0.25);
-  }
-  
-  input:checked + .slider {
-    background-color: #ffbf00;
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked+.slider {
+    background-color: var(--accent-color);
+    /* #ffbf00 */
+}
+
+input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
+}
+
+/* Rounded sliders */
+.slider.round {
     border-radius: 50px;
-  }
-  
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
+}
+
+.theme-toggle {
+    /*position: fixed;*/
+    left: calc(((100% - 64px) - 65px) - 30px);
+    top: 9px;
+}
+
+.sicon {
+    position: absolute;
+    top: calc(12px + (34px / 2) - 10px);
+}
+
+.sicon.right {
+    right: calc(((160px / 2) - (60px / 2)) - (20px / 2) - 16px - 5px);
+}
+
+.sicon.left {
+    left: calc(((160px / 2) - (60px / 2)) - (20px / 2) - 16px - 5px);
+}
