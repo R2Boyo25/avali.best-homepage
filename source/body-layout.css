@@ -1,11 +1,13 @@
 :root[color-mode="dark"] {
     --alt-bg: rgba(48, 48, 48, 0.5);
-    --alt-alt-bg: rgba(58, 58, 58, 0.75);
+    --alt-alt-bg: rgba(48, 48, 48, 0.5);
+    /*--alt-alt-bg: rgba(58, 58, 58, 0.75);*/
 }
 
 :root[color-mode="light"] {
     --alt-bg: rgba(192, 192, 192, 0.5);
-    --alt-alt-bg: rgba(173, 173, 173, 0.75);
+    --alt-alt-bg: rgba(192, 192, 192, 0.5);
+    /*--alt-alt-bg: rgba(173, 173, 173, 0.75);*/
 }
 
 .body-layout {
@@ -17,6 +19,7 @@
     margin-bottom: 25px;
     margin-right: 10vw;
     margin-left: 10vw;
+    margin-top: 15px;
     display: inline-flex;
     text-align: center;
     width: 80%
@@ -30,15 +33,24 @@
     background-color: var(--alt-alt-bg);
 }
 
-.body-layout-container .body-layout .body-layout-left {
-    width: 45%;
-    background-color: rgba(70, 70, 70, 0.25);
+.body-layout-container .body-layout div {
+    display: flex;
+    align-items: center;
     text-align: center;
+    justify-content: center;
     padding: 50px 0px 50px 0px;
 }
 
-.body-layout-container .body-layout .body-layout-right {
+.body-layout-container .body-layout .side1 {
+    width: 45%;
+    background-color: rgba(70, 70, 70, 0.25);
+}
+
+.body-layout-container .body-layout .side2 {
     width: 65%;
-    text-align: center;
-    padding: 50px 0px 50px 0px;
+}
+
+.side1 h1,
+.side2 h1 {
+    font-weight: bold;
 }

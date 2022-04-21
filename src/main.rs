@@ -1,21 +1,20 @@
+#![allow(non_snake_case)] // To rustc: no. I have my own standards for naming.
+
 #[macro_use] extern crate rocket;
 
 use std::collections::HashMap;
 
 use rocket::{Request, Data, Route, route};
-use rocket::{response::Redirect, http::Status};
+use rocket::{http::Status};
 use rocket::fs::{FileServer, relative};
 use rocket::http::Method::Get;
 use rocket_dyn_templates::Template;
 
-#[derive(Debug, Responder)]
-pub enum RES {
-    T(Template),
-    R(Redirect),
-    S(Status)
-}
+mod profile;
+mod res;
+mod user;
 
-fn embed4<'a>(req: &'a Request, _: Data) -> route::BoxFuture<'a> {
+fn embedPage<'a>(req: &'a Request, _: Data) -> route::BoxFuture<'a> {
     let mut uri: String = req.uri().to_string();
     uri.replace_range(..5, "");
 
@@ -39,9 +38,9 @@ fn embed4<'a>(req: &'a Request, _: Data) -> route::BoxFuture<'a> {
 }
 
 #[get("/")]
-fn index() -> Template {
+fn index() -> res::RES {
     let a: HashMap<&str, &str> = HashMap::new();
-    Template::render("main", a)
+    res::RES::T(Template::render("main", a))
 }
 
 #[launch]
@@ -49,6 +48,7 @@ fn rocket() -> _ {
     rocket::build()
         .mount("/source", FileServer::from(relative!("source")))
         .mount("/", routes![index])
-        .mount("/", vec![Route::new(Get, "/sub/<anything..>", embed4)])
+        .mount("/", vec![Route::new(Get, "/sub/<anything..>", embedPage)])
+        .attach(profile::stage())
         .attach(Template::fairing())
 }
