@@ -8,35 +8,37 @@
     --alt-alt-bg: rgba(173, 173, 173, 0.75);
 }
 
-.imblock {
+.body-layout {
     height: fit-content;
     min-height: min-content;
 }
 
-.imblock-container .imblock {
+.body-layout-container .body-layout {
     margin-bottom: 25px;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    display: inline-flex;
     text-align: center;
+    width: 80%
 }
 
-.imblock-container .imblock:nth-child(even) {
+.body-layout-container .body-layout:nth-child(even) {
     background-color: var(--alt-bg);
 }
 
-.imblock-container .imblock:nth-child(odd) {
+.body-layout-container .body-layout:nth-child(odd) {
     background-color: var(--alt-alt-bg);
 }
 
-.imblock-container .imblock .imblock-left {
-    width: calc(35% - 10vw);
+.body-layout-container .body-layout .body-layout-left {
+    width: 45%;
     background-color: rgba(70, 70, 70, 0.25);
-    float: left;
     text-align: center;
-    padding: 50px 0px 50px 10vw;
+    padding: 50px 0px 50px 0px;
 }
 
-.imblock-container .imblock .imblock-right {
-    width: calc(65% - 10vw);
-    float: right;
+.body-layout-container .body-layout .body-layout-right {
+    width: 65%;
     text-align: center;
-    padding: 50px 10vw 50px 0px;
+    padding: 50px 0px 50px 0px;
 }
