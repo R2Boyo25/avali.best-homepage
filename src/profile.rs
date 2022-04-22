@@ -1,7 +1,7 @@
 #![allow(non_snake_case)] // To rustc: no. I have my own standards for naming.
 
 use std::collections::HashMap;
-use rocket::{fairing::AdHoc, http::Status};
+use rocket::{http::{Cookie, CookieJar, Status}, fairing::AdHoc};
 use rocket_dyn_templates::Template;
 
 use crate::res::RES;
@@ -36,8 +36,12 @@ pub fn profileUsername(username: &str) -> RES {
 }
 
 #[get("/", rank = 2)]
-pub fn profileNone() -> RES {
-    todo!("profile for self")
+pub fn profileNone(cookies: &CookieJar<'_>) -> RES {
+    let userid = match cookies.get("user_id") {
+        None => 0,
+        Some(x) => x
+    };
+    profileUserID(userid)
 }
 
 pub fn stage() -> AdHoc {

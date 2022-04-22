@@ -5,7 +5,11 @@ pub fn lookupUserIDFromUsername(username: &str) -> i128 {
 }
 
 pub fn userExists(userid: i128) -> bool {
-    true
+    if userid < 0 {
+        return false;
+    } else {
+        true
+    }
 }
 
 pub fn lookupUsernameFromUserID(userid: i128) -> &'static str {
