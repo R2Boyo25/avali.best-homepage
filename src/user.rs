@@ -13,5 +13,9 @@ pub fn userExists(userid: i128) -> bool {
 }
 
 pub fn lookupUsernameFromUserID(userid: i128) -> &'static str {
-    ""
+    if userid == 0 {
+        return "Kazani";
+    } else {
+        ""
+    }
 }

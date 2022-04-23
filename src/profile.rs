@@ -1,13 +1,13 @@
 #![allow(non_snake_case)] // To rustc: no. I have my own standards for naming.
 
 use std::collections::HashMap;
-use rocket::{http::{Cookie, CookieJar, Status}, fairing::AdHoc};
+use rocket::{http::{Cookie, CookieJar, Status}, fairing::AdHoc, response::Redirect};
 use rocket_dyn_templates::Template;
 
 use crate::res::RES;
 use crate::user::{lookupUserIDFromUsername, userExists, lookupUsernameFromUserID};
 
-#[get("/<userid>", rank = 1)]
+#[get("/<userid>", rank = 0)]
 pub fn profileUserID(userid: i128) -> RES {
     if !userExists(userid) {
         return RES::S(Status { code: 404 });
@@ -24,7 +24,7 @@ pub fn profileUserID(userid: i128) -> RES {
     RES::T(Template::render("profile", &a))
 }
 
-#[get("/<username>", rank = 0)]
+#[get("/<username>", rank = 1)]
 pub fn profileUsername(username: &str) -> RES {
     let userid = lookupUserIDFromUsername(username);
 
@@ -37,11 +37,11 @@ pub fn profileUsername(username: &str) -> RES {
 
 #[get("/", rank = 2)]
 pub fn profileNone(cookies: &CookieJar<'_>) -> RES {
-    let userid = match cookies.get("user_id") {
+    let userid: i128 = match cookies.get("user_id") {
         None => 0,
-        Some(x) => x
+        Some(x) => x.value().parse().unwrap()
     };
-    profileUserID(userid)
+    RES::R(Redirect::to(format!("/profile/{}", userid)))
 }
 
 pub fn stage() -> AdHoc {

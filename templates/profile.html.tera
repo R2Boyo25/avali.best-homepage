@@ -1,3 +1,5 @@
 {% extends "main" %} {% block head %}
 <title>{{username | title}} - Avali.Best</title>
-{% endblock %} {% block body %} {% endblock %}
+{% endblock %} {% block body %}
+{{userid}}
+{% endblock %}

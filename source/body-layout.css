@@ -1,12 +1,14 @@
 :root[color-mode="dark"] {
     --alt-bg: rgba(48, 48, 48, 0.5);
     --alt-alt-bg: rgba(48, 48, 48, 0.5);
+    --container-bg-color: rgba(0, 0, 0, 0.200);
     /*--alt-alt-bg: rgba(58, 58, 58, 0.75);*/
 }
 
 :root[color-mode="light"] {
     --alt-bg: rgba(192, 192, 192, 0.5);
     --alt-alt-bg: rgba(192, 192, 192, 0.5);
+    --container-bg-color: rgba(0, 0, 0, 0.100);
     /*--alt-alt-bg: rgba(173, 173, 173, 0.75);*/
 }
 
@@ -15,14 +17,19 @@
     min-height: min-content;
 }
 
-.body-layout-container .body-layout {
-    margin-bottom: 25px;
+.body-layout-container {
+    min-height: calc(100% - 55px);
+    background-color: var(--container-bg-color);
     margin-right: 10vw;
     margin-left: 10vw;
-    margin-top: 15px;
+}
+
+.body-layout {
     display: inline-flex;
     text-align: center;
-    width: 80%
+    width: 80%;
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
 
 .body-layout-container .body-layout:nth-child(even) {
