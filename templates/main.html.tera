@@ -7,7 +7,8 @@
     <link href="/source/main.css" rel="stylesheet" media="screen">
     <link href="/source/slider.css" rel="stylesheet" media="screen">
     <link href="/source/table.css" rel="stylesheet" media="screen">
-    <link href="/source/body-layout.css" rel="stylesheet" media="screen"> {% block head %}
+    <link href="/source/body-layout.css" rel="stylesheet" media="screen">
+    {% block head %}
     <title>Avali.Best</title>
     {% endblock %}
 </head>
@@ -27,7 +28,7 @@
 
             <span class="topbar-right">
                 <div class="dropdown">
-                    <button onclick="toggleDropdown(this)" class="dropbtn" hidden><img src="/source/KazaniPFP.png" class="pfp" /></button>
+                    <button onmousedown="toggleDropdown(this)" class="dropbtn" hidden><img src="/source/KazaniPFP.png" class="topbar-pfp" /></button>
                     <div class="dropdown-content">
                         <div align="center">
                             <span class=theme-toggle>
@@ -77,25 +78,25 @@
             {% block body %}
             <div class="body-layout-container">
                 <div class="body-layout">
-                    <div class="side2">
+                    <div class="side2 center">
                         <h1>AVALI</h1>
                     </div>
-                    <div class="side1">
+                    <div class="side1 center">
                         OR
                     </div>
                 </div>
                 <div class="body-layout">
-                    <div class="side1">
+                    <div class="side1 center">
                         <h1>AVOLI:</h1>
                     </div>
-                    <div class="side2">THEY'RE</div>
+                    <div class="side2 center">THEY'RE</div>
                 </div>
 
                 <div class="body-layout">
-                    <div class="side2">
+                    <div class="side2 center">
                         STILL
                     </div>
-                    <div class="side1">
+                    <div class="side1 center">
                         <h1>RAVIOLI.</h1>
                     </div>
                 </div>

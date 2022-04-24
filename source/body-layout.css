@@ -28,6 +28,7 @@
     display: inline-flex;
     text-align: center;
     width: 80%;
+    max-width: 80%;
     margin-top: 15px;
     margin-bottom: 25px;
 }
@@ -41,20 +42,27 @@
 }
 
 .body-layout-container .body-layout div {
-    display: flex;
     align-items: center;
     text-align: center;
-    justify-content: center;
     padding: 50px 0px 50px 0px;
+    font-size: 2vw;
+    word-wrap: break-word;
+}
+
+.body-layout-container .body-layout div.center {
+    justify-content: center;
+    display: flex;
 }
 
 .body-layout-container .body-layout .side1 {
     width: 45%;
+    max-width: 45%;
     background-color: rgba(70, 70, 70, 0.25);
 }
 
 .body-layout-container .body-layout .side2 {
     width: 65%;
+    max-width: 65%;
 }
 
 .side1 h1,

@@ -1,5 +1,17 @@
 {% extends "main" %} {% block head %}
+<link href="/source/pages/profile.css" rel="stylesheet" media="screen">
 <title>{{username | title}} - Avali.Best</title>
 {% endblock %} {% block body %}
-{{userid}}
+<div class="body-layout-container">
+    <div class="body-layout">
+        <div class="side1">
+            <img class="pfp" src="/source/KazaniPFP.png">
+            <br>
+            <h1>{{username}}</h1>
+        </div>
+        <div class="side2 center">
+            <p style="width: 80%;">HELLO HERE IS MY DESCRIPTION EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -6,7 +6,7 @@ function toggleDropdown(a) {
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
-    if (!event.target.matches('.pfp') && !document.getElementsByClassName("dropdown-content")[0].contains(event.target)) {
+    if (!event.target.matches('.topbar-pfp') && !document.getElementsByClassName("dropdown-content")[0].contains(event.target)) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
