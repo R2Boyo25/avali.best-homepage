@@ -7,7 +7,7 @@
         <div class="side1">
             <img class="pfp" src="/source/KazaniPFP.png">
             <br>
-            <h1>{{username}}</h1>
+            <h1 class="ausername">{{username}}</h1>
         </div>
         <div class="side2 center">
             <p style="width: 80%;">HELLO HERE IS MY DESCRIPTION EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>

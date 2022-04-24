@@ -2,6 +2,7 @@
     --alt-bg: rgba(48, 48, 48, 0.5);
     --alt-alt-bg: rgba(48, 48, 48, 0.5);
     --container-bg-color: rgba(0, 0, 0, 0.200);
+    --border-radius-body-layout: 15px;
     /*--alt-alt-bg: rgba(58, 58, 58, 0.75);*/
 }
 
@@ -9,6 +10,7 @@
     --alt-bg: rgba(192, 192, 192, 0.5);
     --alt-alt-bg: rgba(192, 192, 192, 0.5);
     --container-bg-color: rgba(0, 0, 0, 0.100);
+    --border-radius-body-layout: 15px;
     /*--alt-alt-bg: rgba(173, 173, 173, 0.75);*/
 }
 
@@ -68,4 +70,18 @@
 .side1 h1,
 .side2 h1 {
     font-weight: bold;
+}
+
+.body-layout {
+    border-radius: var(--border-radius-body-layout);
+}
+
+.body-layout div:first-child {
+    border-top-left-radius: var(--border-radius-body-layout);
+    border-bottom-left-radius: var(--border-radius-body-layout);
+}
+
+.body-layout div:last-child {
+    border-top-right-radius: var(--border-radius-body-layout);
+    border-bottom-right-radius: var(--border-radius-body-layout);
 }

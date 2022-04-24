@@ -43,6 +43,9 @@
                         <div align="center">
                             <a href="/profile">Profile</a>
                         </div>
+                        <hr>
+                        <div align="center" id="loginlogout">
+                        </div>
                     </div>
                 </div>
             </span>
@@ -70,6 +73,13 @@
             document.documentElement.setAttribute("color-mode", getCookie("theme"));
         } else {
             setCookie("theme", "light");
+        }
+    </script>
+    <script>
+        if (getCookie("userid") != "") {
+            document.getElementById("loginlogout").innerHTML = "<a href=\"/logout\">Logout</a>";
+        } else {
+            document.getElementById("loginlogout").innerHTML = "<a href=\"/login\">Login</a>\n<a href=\"/register\">Register</a>";
         }
     </script>
 

@@ -35,7 +35,7 @@
     -webkit-transition: .4s;
     transition: .4s;
     display: inline-block;
-    box-shadow: 5px 5px 10px 0px #00000050 inset;
+    /*box-shadow: 5px 5px 10px 0px #00000050 inset;*/
 }
 
 .slider:before {
@@ -51,7 +51,7 @@
     border-style: solid;
     -webkit-transition: .4s;
     transition: .4s;
-    box-shadow: 1px var(--slider-shadow) 3px 1px rgba(202, 202, 202, 0.25);
+    /*box-shadow: 1px var(--slider-shadow) 3px 1px rgba(202, 202, 202, 0.25);*/
 }
 
 input:checked+.slider {

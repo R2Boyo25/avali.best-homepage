@@ -17,13 +17,15 @@
     z-index: 1000;
     display: none;
     position: absolute;
-    right: 45px;
-    background-color: #f7f7f7;
+    right: 32px;
+    background-color: var(--topbar-background);
+    /*#f7f7f7;*/
     min-width: 160px;
     max-width: 160px;
-    box-shadow: 5px 5px 10px 0px #00000050;
+    /*box-shadow: 5px 5px 10px 0px #00000050;*/
     z-index: 1;
-    border-radius: var(--dropdown-border-radius);
+    border-bottom-left-radius: var(--dropdown-border-radius);
+    border-bottom-right-radius: var(--dropdown-border-radius);
 }
 
 
@@ -68,10 +70,10 @@ button.dropbtn {
     border-bottom-right-radius: var(--dropdown-border-radius);
 }
 
-.dropdown-content *:first-child {
+/*.dropdown-content *:first-child {
     border-top-left-radius: var(--dropdown-border-radius);
     border-top-right-radius: var(--dropdown-border-radius);
-}
+}*/
 
 .dropdown-content hr {
     margin: 0px;
