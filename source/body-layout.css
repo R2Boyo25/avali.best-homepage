@@ -22,15 +22,16 @@
 .body-layout-container {
     min-height: calc(100% - 55px);
     background-color: var(--container-bg-color);
-    margin-right: 5vw;
-    margin-left: 5vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    border-radius: var(--border-radius-body-layout);
 }
 
 .body-layout {
     display: inline-flex;
     text-align: center;
-    width: 90%;
-    max-width: 90%;
+    width: 96%;
+    max-width: 96%;
     margin-top: 15px;
     margin-bottom: 25px;
 }
@@ -47,7 +48,7 @@
     align-items: center;
     text-align: center;
     padding: 50px 0px 50px 0px;
-    font-size: 32px;
+    font-size: 16px !important;
     word-wrap: break-word;
 }
 

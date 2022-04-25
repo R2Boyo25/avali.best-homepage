@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Akshar;
+    src: url("/source/fonts/Akshar.ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("/source/fonts/RobotoMono.ttf");
+}
+
+@font-face {
+    font-family: STMono;
+    src: url("/source/fonts/ShareTechMono.ttf");
+}

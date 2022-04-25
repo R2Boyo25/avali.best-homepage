@@ -15,41 +15,41 @@
 
 <body>
     <div class=topbar>
-        <div>
-            <a href="/">Home</a>
-            <span class="verticalLine"></span>
-            <a href="/sub/art">Art</a>
-            <span class="verticalLine"></span>
-            <a href="/sub/chat">Chat</a>
-            <span class="verticalLine"></span>
-            <a href="/sub/wiki">Wiki</a>
-            <span class="verticalLine"></span>
-            <a href="/sub/chars">Characters</a>
+        <a href="/">Home</a>
+        <span class="verticalLine"></span>
+        <a href="/sub/art">Art</a>
+        <span class="verticalLine"></span>
+        <a href="/sub/chat">Chat</a>
+        <span class="verticalLine"></span>
+        <a href="/sub/wiki">Wiki</a>
+        <span class="verticalLine"></span>
+        <a href="/sub/chars">Characters</a>
 
-            <span class="topbar-right">
-                <div class="dropdown">
-                    <button onmousedown="toggleDropdown(this)" class="dropbtn" hidden><img src="/source/KazaniPFP.png" class="topbar-pfp" /></button>
-                    <div class="dropdown-content">
-                        <div align="center">
-                            <span class=theme-toggle>
-                                <label class="switch">
-                                    <input type="checkbox" id="themeswitch" tabindex="0" onclick="changeTheme();"><span class="slider round"></span>
-                                </label>
-                            </span>
-                            <img src="/source/sun.svg" height="20" width="auto" class="sicon left" style="margin-right: 5px;">
-                            <img src="/source/moon.svg" height="20" width="auto" class="sicon right" style="margin-left: 5px;">
-                        </div>
-                        <hr>
-                        <div align="center">
-                            <a href="/profile">Profile</a>
-                        </div>
-                        <hr>
-                        <div align="center" id="loginlogout">
-                        </div>
+        <span class="topbar-right">
+            <div class="dropdown">
+                <button onmousedown="toggleDropdown(this)" class="dropbtn" hidden><img src="/source/KazaniPFP.png" class="topbar-pfp" /></button>
+                <div class="dropdown-content">
+                    <div style="display: flex; justify-content: space-between; align-items: center; text-align: center;">
+                        <label for="themeswitch">Dark</label>
+                        <input type="checkbox" id="themeswitch" tabindex="0" onclick="changeTheme();">
+                        <!--span class=theme-toggle>
+                            <label class="switch">
+                                <input type="checkbox" id="themeswitch" tabindex="0" onclick="changeTheme();"><span class="slider round"></span>
+                            </label>
+                        </span>
+                        <img src="/source/sun.svg" height="20" width="auto" class="sicon left" style="margin-right: 5px;">
+                        <img src="/source/moon.svg" height="20" width="auto" class="sicon right" style="margin-left: 5px;">-->
+                    </div>
+                    <hr>
+                    <div>
+                        <a href="/profile">Profile</a>
+                    </div>
+                    <hr>
+                    <div id="loginlogout">
                     </div>
                 </div>
-            </span>
-        </div>
+            </div>
+        </span>
     </div>
     <script>
         function changeTheme() {

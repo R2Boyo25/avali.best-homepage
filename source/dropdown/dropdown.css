@@ -21,13 +21,11 @@
     background-color: var(--topbar-background);
     /*#f7f7f7;*/
     min-width: 160px;
-    max-width: 160px;
     /*box-shadow: 5px 5px 10px 0px #00000050;*/
     z-index: 1;
-    border-bottom-left-radius: var(--dropdown-border-radius);
-    border-bottom-right-radius: var(--dropdown-border-radius);
+    /*border-bottom-left-radius: var(--dropdown-border-radius);
+    border-bottom-right-radius: var(--dropdown-border-radius);*/
 }
-
 
 /* Links inside the dropdown */
 
@@ -49,6 +47,7 @@
 .dropdown-content div a {
     color: rgb(44, 44, 44);
     cursor: pointer;
+    padding-left: 10px;
 }
 
 .dropdown-content div a:hover {
@@ -65,10 +64,10 @@ button.dropbtn {
     all: unset;
 }
 
-.dropdown-content *:last-child {
+/*.dropdown-content *:last-child {
     border-bottom-left-radius: var(--dropdown-border-radius);
     border-bottom-right-radius: var(--dropdown-border-radius);
-}
+}*/
 
 /*.dropdown-content *:first-child {
     border-top-left-radius: var(--dropdown-border-radius);
