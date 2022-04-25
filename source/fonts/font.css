@@ -12,3 +12,8 @@
     font-family: STMono;
     src: url("/source/fonts/ShareTechMono.ttf");
 }
+
+@font-face {
+    font-family: AvaliScratch;
+    src: url("/source/fonts/avali-scratch-lowercase.ttf");
+}

@@ -1,5 +1,13 @@
 @import "/source/fonts/font.css";
 
+:root[font-mode="default"] {
+    --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+}
+
+:root[font-mode="avali"] {
+    --font-family: AvaliScratch;
+}
+
 :root[color-mode="dark"] {
     --bg-color: #1a1a1a;
     --topbar-background: #fefefe;
@@ -18,7 +26,7 @@ body {
     /*font-family: STMono;*/
     cursor: url("/source/cursor.svg") 0 0, default;
     color: var(--text-color);
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    font-family: var(--font-family);
 }
 
 main {
@@ -40,6 +48,8 @@ body {
 }
 
 .topbar {
+    align-items: center;
+    justify-content: space-between;
     float: left;
     position: fixed;
     left: 0;

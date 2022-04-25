@@ -1,4 +1,4 @@
-<html color-mode="light">
+<html color-mode="light" font-mode="">
 
 <head>
     <script src="/source/cookie.js"></script>
@@ -30,21 +30,18 @@
                 <button onmousedown="toggleDropdown(this)" class="dropbtn" hidden><img src="/source/KazaniPFP.png" class="topbar-pfp" /></button>
                 <div class="dropdown-content">
                     <div style="display: flex; justify-content: space-between; align-items: center; text-align: center;">
-                        <label for="themeswitch">Dark</label>
+                        <label style="font-size: 18px; color: rgb(44, 44, 44);" for="themeswitch">Dark</label>
                         <input type="checkbox" id="themeswitch" tabindex="0" onclick="changeTheme();">
-                        <!--span class=theme-toggle>
-                            <label class="switch">
-                                <input type="checkbox" id="themeswitch" tabindex="0" onclick="changeTheme();"><span class="slider round"></span>
-                            </label>
-                        </span>
-                        <img src="/source/sun.svg" height="20" width="auto" class="sicon left" style="margin-right: 5px;">
-                        <img src="/source/moon.svg" height="20" width="auto" class="sicon right" style="margin-left: 5px;">-->
                     </div>
-                    <hr>
+                    <div style="display: flex; justify-content: space-between; align-items: center; text-align: center; display: none;">
+                        <label style="font-size: 18px; color: rgb(44, 44, 44);" for="fontswitch">Avali Scratch</label>
+                        <input type="checkbox" id="fontswitch" tabindex="0" onclick="changeFont();">
+                    </div>
+                    <div class="separator"><span>Account</span><span class="line"></span></div>
                     <div>
                         <a href="/profile">Profile</a>
                     </div>
-                    <hr>
+                    <div class="separator"><span>Login</span><span class="line"></span></div>
                     <div id="loginlogout">
                     </div>
                 </div>
@@ -61,6 +58,16 @@
             }
             setCookie("theme", h.getAttribute("color-mode"));
         }
+
+        function changeFont() {
+            let h = document.documentElement;
+            if (h.getAttribute("font-mode") == "default") {
+                h.setAttribute("font-mode", "avali");
+            } else {
+                h.setAttribute("font-mode", "default");
+            }
+            setCookie("font-mode", h.getAttribute("font-mode"));
+        }
     </script>
     <script>
         if (getCookie("theme") != "") {
@@ -73,6 +80,17 @@
             document.documentElement.setAttribute("color-mode", getCookie("theme"));
         } else {
             setCookie("theme", "light");
+        }
+        if (getCookie("font-mode") != "") {
+            let a = document.getElementById("fontswitch");
+            if (getCookie("font-mode") == "default") {
+                a.checked = false;
+            } else {
+                a.checked = true;
+            }
+            document.documentElement.setAttribute("font-mode", getCookie("font-mode"));
+        } else {
+            setCookie("font-mode", "avali");
         }
     </script>
     <script>
