@@ -2,16 +2,10 @@
     --dropdown-border-radius: 15px;
 }
 
-
-/* The container <div> - needed to position the dropdown content */
-
 .dropdown {
     position: relative;
     display: inline-block;
 }
-
-
-/* Dropdown Content (Hidden by Default) */
 
 .dropdown-content {
     padding-bottom: 10px;
@@ -20,12 +14,8 @@
     position: absolute;
     right: 32px;
     background-color: var(--topbar-background);
-    /*#f7f7f7;*/
     min-width: 200px;
-    /*box-shadow: 5px 5px 10px 0px #00000050;*/
     z-index: 1;
-    /*border-bottom-left-radius: var(--dropdown-border-radius);
-    border-bottom-right-radius: var(--dropdown-border-radius);*/
 }
 
 .separator {
@@ -49,15 +39,21 @@
     margin-left: 10px;
     background-color: var(--accent-color);
     border-radius: 2px;
-    /*border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;*/
 }
-
-/* Links inside the dropdown */
 
 .dropdown-content * {
     color: black;
     text-decoration: none;
+}
+
+.dropdown-content {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.dropdown-content div:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .dropdown-content div:first-child,
@@ -67,19 +63,21 @@
 
 .dropdown-content div {
     font-size: 18px;
+    text-align: right;
 }
 
 .dropdown-content div a {
     color: rgb(44, 44, 44);
     cursor: pointer;
     padding-left: 10px;
+    padding-right: 15px;
 }
 
 .dropdown-content div a:hover {
-    background-color: #bebebe;
+    /*background-color: #bebebe;*/
+    text-decoration: underline;
 }
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 
 .show {
     display: block;
@@ -89,16 +87,15 @@ button.dropbtn {
     all: unset;
 }
 
-/*.dropdown-content *:last-child {
-    border-bottom-left-radius: var(--dropdown-border-radius);
-    border-bottom-right-radius: var(--dropdown-border-radius);
-}*/
-
-/*.dropdown-content *:first-child {
-    border-top-left-radius: var(--dropdown-border-radius);
-    border-top-right-radius: var(--dropdown-border-radius);
-}*/
-
 .dropdown-content hr {
     margin: 0px;
+}
+
+.checkmbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-right: 5px;
+    padding-left: 5px;
 }

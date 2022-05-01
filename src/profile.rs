@@ -5,7 +5,7 @@ use rocket::{http::{Cookie, CookieJar, Status}, fairing::AdHoc, response::Redire
 use rocket_dyn_templates::Template;
 
 use crate::res::RES;
-use crate::user::{lookupUserIDFromUsername, userExists, lookupUsernameFromUserID};
+use crate::user::{lookupUserIDFromUsername, userExists, lookupUsernameFromUserID, descriptionFromUserID};
 
 #[get("/<userid>", rank = 0)]
 pub fn profileUserID(userid: i128) -> RES {
@@ -15,11 +15,13 @@ pub fn profileUserID(userid: i128) -> RES {
 
     let username = lookupUsernameFromUserID(userid);
     let suserid = &userid.to_string();
+    let description = descriptionFromUserID(userid);
 
     let mut a: HashMap<&str, &str> = HashMap::new();
 
     a.insert("userid", suserid);
     a.insert("username", username);
+    a.insert("description", description);
 
     RES::T(Template::render("profile", &a))
 }

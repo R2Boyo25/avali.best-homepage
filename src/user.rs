@@ -19,3 +19,11 @@ pub fn lookupUsernameFromUserID(userid: i128) -> &'static str {
         ""
     }
 }
+
+pub fn descriptionFromUserID(userid: i128) -> &'static str {
+    if userid == 0 {
+        return "HELLO IM KAZANI AND THIS IS A TEST FOR THE PROFILE PAGES AND IM GOING TO KEEP TYPING IN CAPS TO SEE HOW WRAPPING WORKS AAAAAAA EEEEEEE IIIIII OOOOOO UUUUUU";
+    } else {
+        ""
+    }
+}

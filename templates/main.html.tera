@@ -29,16 +29,16 @@
             <div class="dropdown">
                 <button onmousedown="toggleDropdown(this)" class="dropbtn" hidden><img src="/source/KazaniPFP.png" class="topbar-pfp" /></button>
                 <div class="dropdown-content">
-                    <div style="display: flex; justify-content: space-between; align-items: center; text-align: center;">
-                        <label style="font-size: 18px; color: rgb(44, 44, 44);" for="themeswitch">Dark</label>
+                    <div class="checkmbox">
                         <input type="checkbox" id="themeswitch" tabindex="0" onclick="changeTheme();">
+                        <label style="font-size: 18px; color: rgb(44, 44, 44);" for="themeswitch">Dark</label>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; text-align: center; display: none;">
                         <label style="font-size: 18px; color: rgb(44, 44, 44);" for="fontswitch">Avali Scratch</label>
                         <input type="checkbox" id="fontswitch" tabindex="0" onclick="changeFont();">
                     </div>
                     <div class="separator"><span>Account</span><span class="line"></span></div>
-                    <div>
+                    <div style="text-align: right;">
                         <a href="/profile">Profile</a>
                     </div>
                     <div class="separator"><span>Login</span><span class="line"></span></div>
@@ -97,7 +97,7 @@
         if (getCookie("userid") != "") {
             document.getElementById("loginlogout").innerHTML = "<a href=\"/logout\">Logout</a>";
         } else {
-            document.getElementById("loginlogout").innerHTML = "<a href=\"/login\">Login</a>\n<a href=\"/register\">Register</a>";
+            document.getElementById("loginlogout").innerHTML = "<a href=\"/login\">Login</a>\n<br><a href=\"/register\">Register</a>";
         }
     </script>
 

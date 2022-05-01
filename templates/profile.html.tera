@@ -2,15 +2,14 @@
 <link href="/source/pages/profile.css" rel="stylesheet" media="screen">
 <title>{{username | title}} - Avali.Best</title>
 {% endblock %} {% block body %}
+<img class="pfp" src="/source/KazaniPFP.png">
+<h1 class="ausername" style="display:inline;">{{username}}</h1>
 <div class="body-layout-container">
     <div class="body-layout">
         <div class="side1">
-            <img class="pfp" src="/source/KazaniPFP.png">
-            <br>
-            <h1 class="ausername">{{username}}</h1>
         </div>
         <div class="side2 center">
-            <p style="width: 80%;">HELLO HERE IS MY DESCRIPTION EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+            <p style="width: 80%;">{{description}}</p>
         </div>
     </div>
 </div>
