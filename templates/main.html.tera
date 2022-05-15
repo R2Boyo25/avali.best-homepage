@@ -1,4 +1,4 @@
-<html color-mode="light" font-mode="">
+<html color-mode="light" font-mode="default">
 
 <head>
     <script src="/source/cookie.js"></script>
@@ -39,15 +39,15 @@
                         <input type="checkbox" id="fontswitch" tabindex="0" onclick="changeFont();">
                     </div>
                     <div class="separator"><span>Account</span><span class="line"></span></div>
-    <div style="text-align: right;">
-        <a href="/profile">Profile</a>
-    </div>
-    <div class="separator"><span>Login</span><span class="line"></span></div>
-    <div id="loginlogout">
-    </div>
-    </div>
-    </div>
-    </span>
+                    <div style="text-align: right;">
+                        <a href="/profile">Profile</a>
+                    </div>
+                    <div class="separator"><span>Login</span><span class="line"></span></div>
+                    <div id="loginlogout">
+                    </div>
+                </div>
+            </div>
+        </span>
     </div>
     <script>
         function changeTheme() {
@@ -91,7 +91,7 @@
             }
             document.documentElement.setAttribute("font-mode", getCookie("font-mode"));
         } else {
-            setCookie("font-mode", "avali");
+            setCookie("font-mode", "default");
         }
     </script>
     <script>

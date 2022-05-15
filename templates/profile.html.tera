@@ -3,7 +3,7 @@
 <title>{{username | title}} - Avali.Best</title>
 {% endblock %} {% block body %}
 <img class="pfp" src="/source/KazaniPFP.png">
-<h1 class="ausername" style="display:inline;">{{username}}</h1>
+<h1 class="ausername">{{username}}</h1>
 <div class="body-layout-container">
     <div class="body-layout">
         <div class="side1">

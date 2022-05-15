@@ -6,13 +6,21 @@ use rocket::{http::{Cookie, CookieJar, Status}, form::Form, fairing::AdHoc, resp
 use rocket_dyn_templates::Template;
 
 use crate::res::RES;
-use crate::user::{lookupUserIDFromUsername, userExists, lookupUsernameFromUserID, descriptionFromUserID, hashPassword, getPasswordHash};
+use crate::user::{lookupUserIDFromUsername, userExists, lookupUsernameFromUserID, descriptionFromUserID, hashPassword, getPasswordHash, createUser};
 
 #[derive(FromForm)]
 pub struct LoginForm<'r> {
    #[field(validate = len(1..))]
    username: &'r str,
    password: &'r str
+}
+
+#[derive(FromForm)]
+pub struct RegisterForm<'r> {
+   #[field(validate = len(1..))]
+   username: &'r str,
+   password: &'r str,
+   email:    &'r str
 }
 
 #[get("/login")]
@@ -43,8 +51,32 @@ pub fn loginPagePost(loginform: Form<LoginForm<'_>>, cookies: &CookieJar<'_>) ->
     RES::R(Redirect::to(uri!("/")))
 }
 
+#[get("/register")]
+pub fn registerPage() -> RES {
+    let mut context: HashMap<&str, &str> = HashMap::new();
+    context.insert("error", "");
+    RES::T(Template::render("register", &context))
+}
+
+#[post("/register", data="<registerform>")]
+pub fn registerPagePost(registerform: Form<RegisterForm<'_>>) -> RES {
+    let username = registerform.username;
+    let password = registerform.password;
+    let email    = registerform.email;
+
+    if userExists(lookupUserIDFromUsername(username)) {
+        let mut context: HashMap<&str, &str> = HashMap::new();
+        context.insert("error", "Username already exists");
+        return RES::T(Template::render("register", &context));
+    }
+
+    createUser(username, password, email);
+
+    RES::R(Redirect::to(uri!("/login")))
+}
+
 pub fn stage() -> AdHoc {
     AdHoc::on_ignite("Login Stage", |rocket| async {
-        rocket.mount("/", routes![loginPage, loginPagePost])
+        rocket.mount("/", routes![loginPage, loginPagePost, registerPage, registerPagePost])
     })
 }

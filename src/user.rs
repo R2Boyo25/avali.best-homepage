@@ -37,3 +37,7 @@ pub fn hashPassword(pass: &str, username: &str) -> String {
 pub fn getPasswordHash(username: &str) -> String {
     sha256::digest("testkazani")
 }
+
+pub fn createUser(username: &str, password: &str, email: &str) {
+    
+}
