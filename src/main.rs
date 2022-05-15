@@ -13,6 +13,7 @@ use rocket_dyn_templates::Template;
 mod profile;
 mod res;
 mod user;
+mod login;
 
 fn embedPage<'a>(req: &'a Request, _: Data) -> route::BoxFuture<'a> {
     let mut uri: String = req.uri().to_string();
@@ -50,5 +51,7 @@ fn rocket() -> _ {
         .mount("/", routes![index])
         .mount("/", vec![Route::new(Get, "/sub/<anything..>", embedPage)])
         .attach(profile::stage())
+        .attach(login::stage())
         .attach(Template::fairing())
+
 }

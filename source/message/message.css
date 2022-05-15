@@ -1,0 +1,41 @@
+.message-box {
+    position: fixed;
+    top: 50px;
+    left: 5px;
+    margin-top: 10px;
+    color: #000000;
+    text-align: left;
+}
+
+.message {
+    background-color: var(--topbar-background);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 6px;
+    width: fit-content;
+    border-bottom: 3px solid #666666;
+    vertical-align: middle;
+}
+
+.message.error {
+    border-bottom: 3px solid red;
+}
+
+.message .close-message {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    font-weight: bolder;
+    margin-right: 5px;
+    vertical-align: middle;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: auto;
+    background-color: #00000023;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.message .close-message:hover {
+    background-color: #00000036;
+}

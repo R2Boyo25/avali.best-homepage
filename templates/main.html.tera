@@ -8,7 +8,8 @@
     <link href="/source/slider.css" rel="stylesheet" media="screen">
     <link href="/source/table.css" rel="stylesheet" media="screen">
     <link href="/source/body-layout.css" rel="stylesheet" media="screen">
-    {% block head %}
+    <link href="/source/message/message.css" rel="stylesheet" media="screen">
+    <script src="/source/message/message.js"></script> {% block head %}
     <title>Avali.Best</title>
     {% endblock %}
 </head>
@@ -38,15 +39,15 @@
                         <input type="checkbox" id="fontswitch" tabindex="0" onclick="changeFont();">
                     </div>
                     <div class="separator"><span>Account</span><span class="line"></span></div>
-                    <div style="text-align: right;">
-                        <a href="/profile">Profile</a>
-                    </div>
-                    <div class="separator"><span>Login</span><span class="line"></span></div>
-                    <div id="loginlogout">
-                    </div>
-                </div>
-            </div>
-        </span>
+    <div style="text-align: right;">
+        <a href="/profile">Profile</a>
+    </div>
+    <div class="separator"><span>Login</span><span class="line"></span></div>
+    <div id="loginlogout">
+    </div>
+    </div>
+    </div>
+    </span>
     </div>
     <script>
         function changeTheme() {
@@ -101,6 +102,12 @@
         }
     </script>
 
+    <div class="message-box">
+        {% block popup %}
+        <!--<div class="message">Message</div>
+        <div class="message error">Error</div>-->
+        {% endblock %}
+    </div>
     <div align="center">
         <main>
             {% block body %}

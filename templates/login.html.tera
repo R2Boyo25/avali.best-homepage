@@ -1,0 +1,11 @@
+{% extends "main" %} {% block head %}
+<title>Login - Avali.Best</title>
+{% endblock %} {% block body %}
+<form method="post">
+    <input name="username" placeholder="Username" type="text" id="username" required><br><br>
+    <input name="password" placeholder="Password" type="password" id="password" required><br><br>
+    <input type="submit">
+</form>
+{% endblock %} {% block popup %} {% if error != "" %}
+<div class="message error">{{ error }}</div>
+{% endif %} {% endblock %}

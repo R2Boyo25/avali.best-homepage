@@ -1,5 +1,7 @@
 #![allow(non_snake_case)] // To rustc: no. I have my own standards for naming.
 
+use sha256;
+
 pub fn lookupUserIDFromUsername(username: &str) -> i128 {
     0
 }
@@ -26,4 +28,12 @@ pub fn descriptionFromUserID(userid: i128) -> &'static str {
     } else {
         ""
     }
+}
+
+pub fn hashPassword(pass: &str, username: &str) -> String {
+    sha256::digest(pass.to_owned() + username)
+}
+
+pub fn getPasswordHash(username: &str) -> String {
+    sha256::digest("testkazani")
 }

@@ -1,7 +1,7 @@
 #![allow(non_snake_case)] // To rustc: no. I have my own standards for naming.
 
 use std::collections::HashMap;
-use rocket::{http::{Cookie, CookieJar, Status}, fairing::AdHoc, response::Redirect};
+use rocket::{http::{CookieJar, Status}, fairing::AdHoc, response::Redirect};
 use rocket_dyn_templates::Template;
 
 use crate::res::RES;
