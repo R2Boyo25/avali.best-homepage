@@ -95,7 +95,7 @@
         }
     </script>
     <script>
-        if (getCookie("userid") != "") {
+        if (getCookie("user_id") != "") {
             document.getElementById("loginlogout").innerHTML = "<a href=\"/logout\">Logout</a>";
         } else {
             document.getElementById("loginlogout").innerHTML = "<a href=\"/login\">Login</a>\n<br><a href=\"/register\">Register</a>";

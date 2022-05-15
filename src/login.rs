@@ -75,8 +75,14 @@ pub fn registerPagePost(registerform: Form<RegisterForm<'_>>) -> RES {
     RES::R(Redirect::to(uri!("/login")))
 }
 
+#[get("/logout")]
+pub fn logoutPage(cookies: &CookieJar<'_>) -> RES{
+    cookies.remove(Cookie::named("user_id"));
+    RES::R(Redirect::to("/"))
+}
+
 pub fn stage() -> AdHoc {
     AdHoc::on_ignite("Login Stage", |rocket| async {
-        rocket.mount("/", routes![loginPage, loginPagePost, registerPage, registerPagePost])
+        rocket.mount("/", routes![loginPage, loginPagePost, registerPage, registerPagePost, logoutPage])
     })
 }
