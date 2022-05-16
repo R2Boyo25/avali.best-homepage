@@ -12,7 +12,7 @@
     z-index: 1000;
     display: none;
     position: absolute;
-    right: 32px;
+    right: 20px;
     background-color: var(--topbar-background);
     min-width: 200px;
     z-index: 1;
@@ -77,7 +77,6 @@
     /*background-color: #bebebe;*/
     text-decoration: underline;
 }
-
 
 .show {
     display: block;

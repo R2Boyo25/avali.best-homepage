@@ -1,5 +1,4 @@
 @import "/source/fonts/font.css";
-
 :root[font-mode="default"] {
     --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
@@ -56,11 +55,10 @@ body {
     margin-right: 10px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 830px) {
     .topText {
         display: none;
     }
-
     .fa {
         margin-right: -1px;
     }
@@ -96,7 +94,7 @@ body {
 }
 
 .topbar-pfp {
-    margin-right: 32;
+    margin-right: 20;
     border-radius: 100%;
     width: 32;
     height: 32;
