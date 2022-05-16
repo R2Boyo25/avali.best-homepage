@@ -2,6 +2,7 @@
 
 <head>
     <script src="/source/cookie.js"></script>
+    <script src="/source/shared.js"></script>
     <link href="/source/dropdown/dropdown.css" rel="stylesheet" media="screen">
     <script src="/source/dropdown/dropdown.js"></script>
     <link href="/source/main.css" rel="stylesheet" media="screen">
@@ -102,12 +103,22 @@
         }
     </script>
 
-    <div class="message-box">
+    <div class="message-box" id="message-box">
         {% block popup %}
-        <!--<div class="message">Message</div>
-        <div class="message error">Error</div>-->
         {% endblock %}
     </div>
+    <script>
+        let mbox = document.getElementById("message-box");
+        let p = getGetParameters();
+
+        for (var i = 0; i < p.length; i++) {
+            parameter = p[i];
+            let t = parameter[0];
+            if (t == "success" || t == "error" || t == "message") {
+                createMessage(parameter[1], t);
+            }
+        }
+    </script>
     <div align="center">
         <main>
             {% block body %}

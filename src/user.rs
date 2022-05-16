@@ -3,7 +3,11 @@
 use sha256;
 
 pub fn lookupUserIDFromUsername(username: &str) -> i128 {
-    0
+    if username == "kazani" {
+        return 0;
+    } else {
+        -1
+    }
 }
 
 pub fn userExists(userid: i128) -> bool {
@@ -16,7 +20,7 @@ pub fn userExists(userid: i128) -> bool {
 
 pub fn lookupUsernameFromUserID(userid: i128) -> &'static str {
     if userid == 0 {
-        return "Kazani";
+        return "kazani";
     } else {
         ""
     }

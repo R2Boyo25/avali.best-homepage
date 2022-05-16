@@ -16,3 +16,13 @@ function updateMessages() {
 
 updateMessages();
 var t = setInterval(updateMessages, 1000);
+
+function createMessage(content, type = "message") {
+    if (type == "success") {
+        mbox.innerHTML = ('<div class="message success"><span class="close-message" onclick="remove(this);">X</span>' + content + "</div>") + mbox.innerHTML;
+    } else if (type == "error") {
+        mbox.innerHTML = ('<div class="message error"><span class="close-message" onclick="remove(this);">X</span>' + content + "</div>") + mbox.innerHTML;
+    } else {
+        mbox.innerHTML = ('<div class="message"><span class="close-message" onclick="remove(this);">X</span>' + content + "</div>") + mbox.innerHTML;
+    }
+}

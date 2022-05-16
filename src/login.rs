@@ -48,7 +48,8 @@ pub fn loginPagePost(loginform: Form<LoginForm<'_>>, cookies: &CookieJar<'_>) ->
     }
 
     cookies.add(Cookie::build("user_id", lookupUserIDFromUsername(username).to_string()).finish());
-    RES::R(Redirect::to(uri!("/")))
+    cookies.add(Cookie::build("username", username.to_owned()).finish());
+    RES::R(Redirect::to(uri!("/?success=Successfully%20logged%20in.")))
 }
 
 #[get("/register")]
@@ -72,13 +73,14 @@ pub fn registerPagePost(registerform: Form<RegisterForm<'_>>) -> RES {
 
     createUser(username, password, email);
 
-    RES::R(Redirect::to(uri!("/login")))
+    RES::R(Redirect::to(uri!("/login?success=Successfully%20registered.")))
 }
 
 #[get("/logout")]
 pub fn logoutPage(cookies: &CookieJar<'_>) -> RES{
-    cookies.remove(Cookie::named("user_id"));
-    RES::R(Redirect::to("/"))
+    cookies.remove(Cookie::named("user_id" ));
+    cookies.remove(Cookie::named("username" ));
+    RES::R(Redirect::to("/?success=You%20have%20been%20logged%20out."))
 }
 
 pub fn stage() -> AdHoc {

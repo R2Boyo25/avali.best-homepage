@@ -21,6 +21,10 @@
     border-bottom: 3px solid red;
 }
 
+.message.success {
+    border-bottom: 3px solid green;
+}
+
 .message .close-message {
     font-family: Arial, sans-serif;
     font-size: 1em;
