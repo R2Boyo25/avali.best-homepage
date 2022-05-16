@@ -32,7 +32,7 @@
 }
 
 .separator span:last-child {
-    width: 100%;
+    /*width: 100%;*/
     flex-grow: 100;
     min-width: 5px;
     height: 5px;

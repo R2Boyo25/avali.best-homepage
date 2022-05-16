@@ -51,6 +51,21 @@ body {
     text-decoration: none;
 }
 
+.fa {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    .topText {
+        display: none;
+    }
+
+    .fa {
+        margin-right: -1px;
+    }
+}
+
 .topbar {
     align-items: center;
     justify-content: space-between;
