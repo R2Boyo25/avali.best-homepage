@@ -4,7 +4,7 @@
 <form method="post">
     <input name="username" placeholder="Username" type="text" id="username" required><br><br>
     <input name="password" placeholder="Password" type="password" id="password" required><br><br>
-    <input type="submit">
+    <input type="submit" value="Login">
 </form>
 Don't have an account yet? <a href="/register">Register</a>
 {% endblock %} {% block popup %} {% if error != "" %}

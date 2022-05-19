@@ -14,6 +14,7 @@ mod profile;
 mod res;
 mod user;
 mod login;
+mod cassandra;
 
 fn embedPage<'a>(req: &'a Request, _: Data) -> route::BoxFuture<'a> {
     let mut uri: String = req.uri().to_string();

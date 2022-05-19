@@ -5,7 +5,7 @@
     <input name="username" placeholder="Username" type="text" id="username" required><br><br>
     <input name="email" placeholder="Email" type="text" id="email" required><br><br>
     <input name="password" placeholder="Password" type="password" id="password" required><br><br>
-    <input type="submit">
+    <input type="submit" value="Register">
 </form>
 Already have an account? <a href="/login">Login</a>
 {% endblock %} {% block popup %} {% if error != "" %}

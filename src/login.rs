@@ -2,11 +2,11 @@
 
 
 use std::collections::HashMap;
-use rocket::{http::{Cookie, CookieJar, Status}, form::Form, fairing::AdHoc, response::Redirect};
+use rocket::{http::{Cookie, CookieJar}, form::Form, fairing::AdHoc, response::Redirect};
 use rocket_dyn_templates::Template;
 
 use crate::res::RES;
-use crate::user::{lookupUserIDFromUsername, userExists, lookupUsernameFromUserID, descriptionFromUserID, hashPassword, getPasswordHash, createUser};
+use crate::user::{lookupUserIDFromUsername, userExists, hashPassword, getPasswordHash, createUser};
 
 #[derive(FromForm)]
 pub struct LoginForm<'r> {

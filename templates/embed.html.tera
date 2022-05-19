@@ -1,17 +1,25 @@
 {% extends "main" %}
 
 {% block head %}
-        <title>{{page | title}} - Avali.Best</title>
+<title>{{page | title}} - Avali.Best</title>
+<style>
+    body {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+</style>
 {% endblock %}
 
 {% block body %}
-    <script>
-        let pagename = "{{page}}";
-    </script>
-    <script src="/source/embed.js" ></script>
-    {% if pageargs == "" %}
-    <iframe src="/{{pageargs}}" frameBorder="0" id="embed" onload="updateURL('/sub/'+pagename+this.contentWindow.location.pathname);"> </iframe> <!--"https://{{page}}.avali.best{{pageargs}}"-->
-    {% else %}
-    <iframe src="{{pageargs}}" frameBorder="0" id="embed" onload="updateURL('/sub/'+pagename+this.contentWindow.location.pathname);"> </iframe> <!--"https://{{page}}.avali.best{{pageargs}}"-->
-    {% endif %}
+<script>
+    let pagename = "{{page}}";
+</script>
+<script src="/source/embed.js"></script>
+{% if pageargs == "" %}
+<iframe src="/{{pageargs}}" frameBorder="0" id="embed" onload="updateURL('/sub/'+pagename+this.contentWindow.location.pathname);"> </iframe>
+<!--"https://{{page}}.avali.best{{pageargs}}"-->
+{% else %}
+<iframe src="{{pageargs}}" frameBorder="0" id="embed" onload="updateURL('/sub/'+pagename+this.contentWindow.location.pathname);"> </iframe>
+<!--"https://{{page}}.avali.best{{pageargs}}"-->
+{% endif %}
 {% endblock %}
