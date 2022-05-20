@@ -1,16 +1,16 @@
 .topProfileSection {
-    height: calc(20vw + 30px);
+    height: calc(20vh + 30px);
     width: 100%;
     padding-top: 30px;
 }
 
 .half-circle {
-    position: relative;
-    left: 15vw;
-    width: calc(20vw + 20px);
-    height: calc(10vw + 10px);
-    border-top-left-radius: 100vw;
-    border-top-right-radius: 100vw;
+    position: absolute;
+    left: 10vh;
+    width: calc(20vh + 20px);
+    height: calc(10vh + 10px);
+    border-top-left-radius: 100vh;
+    border-top-right-radius: 100vh;
     border: 10px solid var(--accent-color);
     border-bottom: 0;
 
@@ -18,20 +18,21 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background-color: var(--bg-color);
+    top: calc(5vh + 20px + 30px);
 }
 
 .pfpline {
     width: 100%;
     height: 10px;
-    position: relative;
-    top: calc(15vw + 15px);
+    position: absolute;
+    top: calc(15vh + 20px + 30px);
     left: 0;
     background-color: var(--accent-color);
 }
 
 .pfp {
-    width: 20vw;
-    height: 20vw;
+    width: 20vh;
+    height: 20vh;
     /*border: 2px solid var(--accent-color);*/
     border-radius: 50%;
     object-fit: fill;
@@ -42,17 +43,64 @@
 .top-background {
     background-color: var(--table-background);
     width: 100%;
-    height: calc(15vw + 10px);
-    position: relative;
+    height: calc(15vh + 10px + 30px);
+    position: absolute;
     left: 0;
-    top: 5;
+    top: 10px;
     z-index: -1;
 }
 
 .profileTopContent {
-    position: relative;
-    top: calc(calc(calc(15vw + 30px) / 2) - 0.75em);
-    left: calc(35vw + 20px);
+    position: absolute;
+    top: calc(15vh - 2.5em + 30px);
+    left: calc(10vh + calc(20vh + 20px));
     text-align: center;
-    width: calc(100vw - calc(35vw + 40px));
+    width: calc(100vw - calc(10vh + calc(20vh + 20px)));
+}
+
+@media (max-width: 650px) {
+    .profileTopContent {
+        left: calc(5vh + calc(20vh + 20px));
+        width: calc(100vw - calc(5vh + calc(20vh + 20px)));
+    }
+
+    .half-circle {
+        left: 5vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .profileTopContent {
+        left: calc(5vh + calc(10vh + 20px));
+        width: calc(100vw - calc(5vh + calc(10vh + 20px)));
+    }
+
+    .pfp {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    .half-circle {
+        width: calc(10vh + 20px);
+        height: calc(5vh + 10px);
+    }
+
+    .pfpline {
+        top: calc(10vh + 20px + 30px);
+    }
+
+    .top-background {
+        height: calc(10vh + 10px);
+        top: unset;
+        bottom: calc(100vh - calc(10vh + 20px + 30px));
+    }
+
+    .profileTopContent {
+        top: calc(10vh - 2.5em + 30px);
+    }
+
+    .topProfileSection {
+        height: calc(10vh + 30px);
+        margin-bottom: 10px;
+    }
 }

@@ -10,6 +10,7 @@
     <div class="pfpline"></div>
     <div class="half-circle"><img class="pfp" src="/source/KazaniPFP.png"></div>
 </div>
+<!--
 <div class="body-layout-container">
     <div class="body-layout">
         <div class="side1">
@@ -19,4 +20,5 @@
         </div>
     </div>
 </div>
+-->
 {% endblock %}
