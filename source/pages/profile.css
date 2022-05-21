@@ -42,7 +42,6 @@
 
 .top-background {
     background-color: var(--table-background);
-    background-image: url("/source/KazaniPFP.png");
     width: 100%;
     height: calc(15vh + 10px + 30px);
     position: relative;
