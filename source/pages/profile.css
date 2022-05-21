@@ -42,11 +42,13 @@
 
 .top-background {
     background-color: var(--table-background);
+    background-image: url("/source/KazaniPFP.png");
     width: 100%;
     height: calc(15vh + 10px + 30px);
-    position: absolute;
+    position: relative;
     left: 0;
-    top: 10px;
+    top: unset;
+    bottom: calc(15vh + 10px + 30px);
     z-index: -1;
 }
 
@@ -92,7 +94,7 @@
     .top-background {
         height: calc(10vh + 10px);
         top: unset;
-        bottom: calc(100vh - calc(10vh + 20px + 30px));
+        bottom: calc(10vh + 10px);
     }
 
     .profileTopContent {
