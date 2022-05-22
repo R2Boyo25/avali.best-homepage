@@ -7,5 +7,6 @@ use rocket_dyn_templates::Template;
 pub enum RES {
     R(Redirect),
     T(Template),
-    S(Status)
+    S(Status),
+    STR(&'static str)
 }

@@ -15,6 +15,7 @@ mod res;
 mod user;
 mod login;
 mod cassandra;
+mod userFiles;
 
 fn embedPage<'a>(req: &'a Request, _: Data) -> route::BoxFuture<'a> {
     let mut uri: String = req.uri().to_string();
@@ -53,6 +54,7 @@ fn rocket() -> _ {
         .mount("/", vec![Route::new(Get, "/sub/<anything..>", embedPage)])
         .attach(profile::stage())
         .attach(login::stage())
+        .attach(userFiles::stage())
         .attach(Template::fairing())
 
 }
