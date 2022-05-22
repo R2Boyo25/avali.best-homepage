@@ -7,11 +7,13 @@
         <h1 class="ausername">{{username | title}}</h1>
     </div>
     <div class="pfpline" id="pfpline">
-        <div class="top-background" id="top-background"></div>
+        <div class="top-background" id="top-background">
+            <img class="bg-img" src="/{{username}}/banner" />
+        </div>
     </div>
-    <div class="half-circle"><img class="pfp" src="/source/KazaniPFP.png"></div>
+    <div class="half-circle"><img class="pfp" id="pfp" src="/{{username}}/pfp"></div>
 </div>
-<div class="body-layout-container">
+<!--<div class="body-layout-container">
     <div class="body-layout">
         <div class="side1">
         </div>
@@ -19,5 +21,17 @@
             <p style="width: 80%;">{{description}}</p>
         </div>
     </div>
-</div>
+</div>-->
+
+<script>
+    const colorThief = new ColorThief();
+    const img = document.getElementById("pfp");
+    if (img.complete) {
+        document.getElementById("top-background").style.backgroundColor = ctToRGB(colorThief.getColor(img));
+    } else {
+        img.addEventListener('load', function() {
+            document.getElementById("top-background").style.backgroundColor = ctToRGB(colorThief.getColor(img));
+        });
+    }
+</script>
 {% endblock %}

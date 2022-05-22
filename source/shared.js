@@ -46,3 +46,7 @@ function getPosition(el) {
         y: yPos
     };
 }
+
+function ctToRGB(cta) {
+    return "rgb(" + cta[0] + ", " + cta[1] + ", " + cta[2] + ")";
+}

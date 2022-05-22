@@ -122,3 +122,10 @@ iframe {
     display: inline-block;
     /*box-shadow: -1px -1px 5px 5px darkgrey inset;*/
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+}

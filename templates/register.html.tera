@@ -1,13 +1,17 @@
 {% extends "main" %} {% block head %}
 <title>Registration - Avali.Best</title>
 {% endblock %} {% block body %}
-<form method="post">
-    <input name="username" placeholder="Username" type="text" id="username" required><br><br>
-    <input name="email" placeholder="Email" type="text" id="email" required><br><br>
-    <input name="password" placeholder="Password" type="password" id="password" required><br><br>
-    <input type="submit" value="Register">
-</form>
-Already have an account? <a href="/login">Login</a>
+<div class="center">
+    <div>
+        <form method="post">
+            <input name="username" placeholder="Username" type="text" id="username" required><br><br>
+            <input name="email" placeholder="Email" type="text" id="email" required><br><br>
+            <input name="password" placeholder="Password" type="password" id="password" required><br><br>
+            <input type="submit" value="Register">
+        </form>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+</div>
 {% endblock %} {% block popup %} {% if error != "" %}
 <div class="message error">{{ error }}</div>
 {% endif %} {% endblock %}
