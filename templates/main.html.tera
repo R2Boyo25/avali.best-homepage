@@ -181,14 +181,19 @@
         </main>
     </div>
     <footer>
-        <div>
-            <h1>Credits</h1>
-            <p>Website by <a href="https://twitter.com/kazaniavali">Kazani</a></p>
-            <p>Mascot by <a href="https://toyhou.se/Weird_Cat279">WeirdCat279</a> (<a href="https://twitter.com/wcat279">Twitter</a>)</p>
-        </div>
-        <div>
-            <h1>Other Links</h1>
-            <a href="https://discord.gg/t6HF9JV35B">Discord</a>
+        <div class="footercontainer">
+            <!-- No logo yet -->
+            <img src="/source/KazaniPFP.png" class="logo">
+            <div>
+                <h1>Credits</h1>
+                <p>Website by <a href="https://twitter.com/kazaniavali">Kazani</a></p>
+                <p>Mascot by <a href="https://olive-olive.carrd.co">WeirdCat279</a></p>
+            </div>
+            <div>
+                <h1>Other Links</h1>
+                <p><a href="https://discord.gg/t6HF9JV35B">Discord</a></p>
+                <p><a href="https://github.com/r2boyo25/avali.best-homepage">Source Code</a></p>
+            </div>
         </div>
     </footer>
 </body>
