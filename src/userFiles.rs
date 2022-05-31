@@ -5,22 +5,22 @@ use rocket_dyn_templates::Template;
 use crate::res::RES;
 use crate::user::{lookupUserIDFromUsername, userExists, lookupUsernameFromUserID, descriptionFromUserID};
 
-#[get("/<username>/pfp", rank = 2)]
+#[get("/pfp/<username>", rank = 2)]
 pub fn profilePictureUsername(username: &str) -> RES {
     RES::STR("")
 }
 
-#[get("/<id>/pfp", rank = 1)]
+#[get("/pfp/<id>", rank = 1)]
 pub fn profilePictureId(id: i128) -> RES {
     RES::STR("")
 }
 
-#[get("/<username>/banner", rank = 2)]
+#[get("/banner/<username>", rank = 2)]
 pub fn userBannerUsername(username: &str) -> RES {
     RES::STR("")
 }
 
-#[get("/<id>/banner", rank = 1)]
+#[get("/banner/<id>", rank = 1)]
 pub fn userBannerId(id: &str) -> RES {
     RES::STR("")
 }

@@ -14,7 +14,7 @@ mod profile;
 mod res;
 mod user;
 mod login;
-mod cassandra;
+//mod cassandra;
 mod userFiles;
 
 fn embedPage<'a>(req: &'a Request, _: Data) -> route::BoxFuture<'a> {

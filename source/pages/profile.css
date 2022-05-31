@@ -71,7 +71,7 @@
     top: calc(15vh - 2.5em + 30px);
     left: calc(10vh + calc(20vh + 20px));
     text-align: center;
-    width: calc(100vw - calc(10vh + calc(20vh + 20px)));
+    width: calc(100vw - calc(10vh + calc(20vh + 20px)) - 15px);
 }
 
 @media (max-width: 650px) {

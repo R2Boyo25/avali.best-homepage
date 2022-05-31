@@ -8,10 +8,10 @@
     </div>
     <div class="pfpline" id="pfpline">
         <div class="top-background" id="top-background">
-            <img class="bg-img" src="/{{username}}/banner" />
+            <img class="bg-img" src="/banner/{{username}}" />
         </div>
     </div>
-    <div class="half-circle"><img class="pfp" id="pfp" src="/{{username}}/pfp"></div>
+    <div class="half-circle"><img class="pfp" id="pfp" src="/pfp/{{username}}"></div>
 </div>
 <!--<div class="body-layout-container">
     <div class="body-layout">

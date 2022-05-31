@@ -35,10 +35,12 @@ a {
 
 main {
     margin-top: 60px;
+    min-height: calc(100vh - 60px);
 }
 
 body {
     background-color: var(--bg-color);
+    margin: 0px;
 }
 
 .dark {
@@ -127,5 +129,27 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 70px);
+    /*height: calc(100vh - 70px);*/
+}
+
+footer {
+    position: relative;
+    margin-top: 50px;
+    background-color: #121417;
+    display: flex;
+    color: #eeeeee;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer div {
+    min-width: 20vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    text-align: center;
+}
+
+footer * a {
+    text-decoration: none;
 }
